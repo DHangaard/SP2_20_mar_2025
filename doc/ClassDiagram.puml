@@ -1,0 +1,78 @@
+@startuml
+
+class Author{
+- String name;
+- ArrayList<Title> titles;
++ Author(String name);
++ void addTitle(Title);
++ float calculateTotalPay();
++ String getName();
+}
+
+abstract class Title{
+- String title
+- String literatureType
+- double rate
++ Title(String title, String literatureType)
++ double calculateTotal();
+# double calculatePoints();
+# double convertLiteratureType();
+}
+
+abstract class PhysicalBook{
+# int copies;
++ PhysicalBook(String title, String literatureType, int copies);
+}
+
+abstract class NetBook{
+- int availability
+- int reach
+- int use
++ NetBook(String title, String literatureType, int availability, int reach, int use);
+# double getPseudoCopies();
+- int getUseFactor();
+}
+
+class PrintedBook{
+- int pages
++ PrintedBook(String title, String literatureType, int copies, int pages);
+# double calculatePoints();
+}
+
+class AudioBook{
+- int durationInMinutes;
++ AudioBook(String title, String literatureType, int copies, int durationInMinutes);
+# double calculatePoints();
+}
+
+class EAudioBook{
+- int durationInMinutes
++EAudioBook(String title, String literatureType, int availability, int reach, int use, int durationInMinutes);
++ calculatePoints();
+}
+
+class EBook{
+- int characters;
+- boolean illustrated;
++ EBook(String title, String literatureType, int availability, int reach, int use, int characters, boolean illustrated);
+- calculatePages();
++ calculatePoints();
+}
+
+interface IAudioBook{
+}
+
+Author <|-- Title
+Title <|-- PhysicalBook
+Title <|-- NetBook
+
+PhysicalBook <|-- PrintedBook
+PhysicalBook <|-- AudioBook
+
+NetBook <|-- EAudioBook
+NetBook <|-- EBook
+
+IAudioBook <|.. AudioBook
+IAudioBook <|.. EAudioBook
+
+@enduml
