@@ -1,3 +1,6 @@
+// Study Point 2
+// Daniel Hangaard
+
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 

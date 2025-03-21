@@ -1,3 +1,6 @@
+// Study Point 2
+// Daniel Hangaard
+
 public class EAudioBook extends NetBook implements IAudioBook {
 
     // Attributes

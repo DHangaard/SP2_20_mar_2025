@@ -1,3 +1,6 @@
+// Study Point 2
+// Daniel Hangaard
+
 import java.util.ArrayList;
 
 public class LibraryRoyaltyCalculator {
