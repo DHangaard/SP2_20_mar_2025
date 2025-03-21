@@ -5,7 +5,7 @@ public class EBook extends NetBook {
 
     // Attributes
     private int characters;
-    private boolean illustrated = true;
+    private boolean illustrated = false;
 
     // Constructor
     public EBook(String title, String literatureType,int availability, int reach, int use, int characters, boolean illustrated){

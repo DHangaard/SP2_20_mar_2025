@@ -6,7 +6,7 @@ public abstract class Title {
     // Attributes
     private String title;
     protected String literatureType;
-    private final double rate = 0.067574; // Rate as of 2025 - changed to private instead of protected
+    private static final double rate = 0.067574; // Rate as of 2025 - changed to private instead of protected
 
     // Constructor
     public Title(String title, String literatureType){
