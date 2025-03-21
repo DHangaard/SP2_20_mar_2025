@@ -16,7 +16,7 @@ public class EBook extends NetBook {
 
     // Methods
     private double calculatePages(){
-        double pages = (this.characters / 1800.0) * 20;
+        double pages = (this.characters / 1800.0) + 20;
         if (illustrated){
             pages *= 1.1; // If the eBook is illustrated + 10%
         }
